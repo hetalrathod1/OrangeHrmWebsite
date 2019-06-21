@@ -10,6 +10,7 @@ public class TestSuit extends Utils {
     HomePage homePage = new HomePage();
     BaseTest baseTest=new BaseTest();
 
+    //SOFTASSERT
     SoftAssert softAssert=new SoftAssert();
     @Test
     public void openBrowser()
