@@ -7,21 +7,30 @@ import org.testng.asserts.SoftAssert;
 
 public class HomePage extends Utils {
 
-//    SoftAssert softAssert=new SoftAssert();
-
     LoadProp loadProp=new LoadProp();
-    private By _userName= By.xpath("//input[@id='txtUsername']");
-    private By _password = By.xpath("//input[@id='txtPassword'] ");
-    private By _loginButton = By.xpath("//input[@class='button']");
+
+    private By _username = By.xpath("//input[@id='txtUsername']");
+    private By _password = By.xpath("//input[@id='txtPassword']");
+    private By _loginbtn = By.xpath("//input[@id='btnLogin']");
 
 
+    public void userIsOnHomePage()
+    {
+
+        assertCurrentURL("https://opensource-demo.orangehrmlive.com/");
+        System.out.println("user is on homepage");
+    }
 
 
     public void loginToOrangeHrm()
     {
-        enterElements(_userName,loadProp.getPropety("username"));
+        enterElements(_username,loadProp.getPropety("username"));
         enterElements(_password,loadProp.getPropety("password"));
-        clickElements(_loginButton);
+        clickElements(_loginbtn);
 
     }
+
+
+
+
 }

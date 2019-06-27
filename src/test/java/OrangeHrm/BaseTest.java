@@ -13,7 +13,7 @@ BrowserSelector browserSelector=new BrowserSelector();
     public void openBrowser()
     {
         browserSelector.setUpBrowser();
-        driver.get("http://orangehrm.qedgetech.com/symfony/web/index.php/auth/login");
+        driver.get("https://opensource-demo.orangehrmlive.com/");
         System.out.println(driver.getCurrentUrl());
     }
 
